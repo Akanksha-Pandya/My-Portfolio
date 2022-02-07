@@ -106,8 +106,9 @@ jQuery(function ($) {
     "use strict";
 
     const circle1 = '<img viewBox="0 0 11.4 11.9" class="circle1" src="store.png"/></img>';
-    const rhombus = '<img viewBox="0 0 13 14" class="rhombus" src="call-center.png" /></img>';
-    const pentahedron = '<img viewBox="0 0 561.8 559.4" class="pentahedron" src="customers.png"/></img>';
+    const rhombus = '<img viewBox="0 0 13 14" class="rhombus" src="customers.png" /></img>';
+    const pentahedron = '<img viewBox="0 0 561.8 559.4" class="pentahedron" src="call-center.png"/></img>';
+    const x = '<img viewBox="0 0 12 12" class="x" src="store.png"/></svg>';
     const dribble = '<svg viewBox="0 0 184.3 184.3"> <path class="dribble" d=""/> </svg>';
     const data = [rhombus, pentahedron, circle1, x];
     const max = 60;
