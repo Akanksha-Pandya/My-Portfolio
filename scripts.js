@@ -33,7 +33,7 @@ jQuery(function ($) {
     /*------------------
         Preloder
     --------------------*/
-        $(".loader").fadeOut(); 
+        $(".loader").fadeOut();
         $("#preloder").delay(100).fadeOut("slow");
     });
 
@@ -105,15 +105,14 @@ jQuery(function ($) {
     // -------------------------------------------------------------
     "use strict";
 
-    const circle1 = '<img viewBox="0 0 11.4 11.9" class="circle1" src="html5.svg"/></img>';
-    const rhombus = '<img viewBox="0 0 13 14" class="rhombus" src="css.png" /></img>';
-    const pentahedron = '<img viewBox="0 0 561.8 559.4" class="pentahedron" src="js.png"/></img>';
-    const x = '<img viewBox="0 0 12 12" class="x" src="python.png"/></svg>';
+    const circle1 = '<img viewBox="0 0 11.4 11.9" class="circle1" src="store.png"/></img>';
+    const rhombus = '<img viewBox="0 0 13 14" class="rhombus" src="call-center.png" /></img>';
+    const pentahedron = '<img viewBox="0 0 561.8 559.4" class="pentahedron" src="customers.png"/></img>';
     const dribble = '<svg viewBox="0 0 184.3 184.3"> <path class="dribble" d=""/> </svg>';
     const data = [rhombus, pentahedron, circle1, x];
     const max = 60;
     let particles = [];
-    
+
     class Ball {
       constructor(shape) {
         var elmnt1 = document.getElementById("main-bg");
@@ -129,7 +128,7 @@ jQuery(function ($) {
         $(window).on("resize", this.resize.bind(this));
         this.render();
       }
-    
+
       render() {
         $(this.shape).css({
           width: this.radius,
@@ -137,12 +136,12 @@ jQuery(function ($) {
         });
         $(".title1").append(this.shape);
       }
-    
+
       resize() {
         this.w = $(window).width();
         this.h = $(window).height();
       }
-    
+
       move() {
         this.x = this.x + this.vx;
         this.y = this.y + this.vy;
@@ -151,38 +150,38 @@ jQuery(function ($) {
           top: this.y,
           transform: "rotate(" + this.y + "deg)"
         });
-    
+
         if (this.x < 0 || this.x > this.w - this.radius) {
           this.vx = -this.vx;
         }
-    
+
         if (this.y < 0 || this.y > this.h - this.radius) {
           this.vy = -this.vy;
         }
-    
+
         return this;
       }
-    
+
     }
-    
+
     function randomInt(min, max) {
       return Math.floor(Math.random() * (max - min + 1) + min);
     }
-    
+
     for (let i = 0; i < max; i++) {
       particles.push(new Ball(data[randomInt(0, data.length - 1)]));
     }
-    
+
     function update() {
       particles = particles.filter(function (p) {
         return p.move();
       });
       requestAnimationFrame(update.bind(this));
     }
-    
-    update(); 
-    
-    
+
+    update();
+
+
 
     // -------------------------------------------------------------
     // Countup
@@ -207,7 +206,7 @@ jQuery(function ($) {
     // -------------------------------------------------------------
     // Progress Bar
     // -------------------------------------------------------------
- 
+
     $('.skill-progress').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
         if (visible) {
             $.each($('div.progress-bar'),function(){
@@ -216,7 +215,7 @@ jQuery(function ($) {
             $(this).unbind('inview');
         }
     });
-    
+
     // -------------------------------------------------------------
     // More skill
     // -------------------------------------------------------------
@@ -320,9 +319,9 @@ jQuery(function ($) {
     // Vidio auto play
     // -------------------------------------------------------------
     (function () {
-    
+
     /* Vimeo API: http://developer.vimeo.com/player/js-api */
-    
+
         var iframe = document.getElementById('nofocusvideo');
         // $f == Froogaloop
         var player = $f(iframe);
@@ -346,7 +345,7 @@ jQuery(function ($) {
     $(window).load(function() {
 
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-         
+
         }else {
             $.stellar({
                 horizontalScrolling: false,
